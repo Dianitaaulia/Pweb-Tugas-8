@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="form-container" id="formContainer">
+    <h2>FORM BIODATA MAHASISWA</h2>
+    <form id="biodataform" action="https://formspree.io/f/xvoenyog" method="post" onsubmit="return validateform()">
+        <div class="form-grup">
+        <b> <label for="status">Apakah Anda Mahasiswa? </label></b>
+            <input type="checkbox" id="status" name="status" required>
+        </div><br>
+
+        
+        <div class="form-grup">
+            <label for="name">Masukkan Nama Lengkap : </label>
+            <input type="text" id="name" name="name" required><br>
+        </div>
+
+        <div class="form-grup">
+            <b>Masukkan Fakultas Anda: </b>
+            <select name="Fakultas" size="1">
+                <option value="infor">Informatika</option>
+                <option value="kimia">Teknik Kimia</option>
+                <option value="industri">Teknik Industri</option>
+            </select> <br><br>
+        </div>
+
+        <div class="form-grup">
+            <label for="email">Masukkan Email Anda : </label>
+            <input type="email" id="email" name="email" required><br>
+        </div>
+
+        <div class="form-grup">
+           <b> <label for="phone">Masukkan Nomor Telepon Anda : </label></b>
+            <input type="tel" id="phone" name="phone" pattern="\d{12}" required><br>
+        </div>
+
+        <div class="form-grup">
+            <label for="birthdate">Masukkan Tanggal Lahir Anda : </label>
+            <input type="date" id="birthdate" name="birthdate" required><br>
+        </div>
+
+        <div class="form-grup">
+    <br><b><label for="alamat">Masukkan Alamat Anda: </label></b>
+           <br><textarea id="alamat" name="alamat" required></textarea>
+        </div>
+
+        <div class="form-grup">
+           <br><br><label for="komentar">Komentar:</label>
+            <br><textarea name="komentar" cols="30" rows="6"></textarea><br><br>
+        </div>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Ulang</button>
+    </form>
+ </div>
+    <script src="script.js"></script>
+</body>
+</html>
